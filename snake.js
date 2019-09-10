@@ -56,7 +56,8 @@ function collision(head,array){
 function draw(){
     ctx.drawImage(ground,0,0);
     for( let i = 0; i < snake.length ; i++){
-        ctx.fillStyle = "white";
+        if(i==0){ctx.fillStyle = "green";}
+        else{ctx.fillStyle = "black";}
         ctx.fillRect(snake[i].x,snake[i].y,box,box);
         ctx.strokeStyle = "red";
         ctx.strokeRect(snake[i].x,snake[i].y,box,box);
